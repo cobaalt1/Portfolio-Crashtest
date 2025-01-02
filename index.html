@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script type='text/javascript'>
+        var letexte = '"Et si votre projet de demain devenait notre aventure commune ?"';
+        var montimer;
+        var cmpt = 0;
+        function typewriter(){
+           lelien = document.getElementById('lien');
+           if(cmpt < letexte.length){
+              courant = lelien.innerHTML.substring(0, lelien.innerHTML.length -1);
+              courant += letexte.charAt(cmpt)+" ";
+              lelien.innerHTML = courant;
+           }
+           else{
+
+           }
+           cmpt++;
+           setTimeout("typewriter()",75);
+        }
+        window.onload = function(){
+           typewriter();
+        }
+     </script>
+</head>
+<header>
+    <div class="Logo">
+        <a href="index.html"><img src="img/Logo.png" alt="LOGO"></a>
+    </div>
+    <div>
+        <nav class="MenuNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div id="Home" class="slide">
+        <div class="GridContainer">
+            <div class="NomPrenom">
+                <h1><bold>Maxence<br>Vienne</bold></h1>
+            </div>
+            <div class="CTA">
+                <h2>Infographiste<br>/web-developer</h2>
+            </div>
+
+                <div class="BackgroundImg">
+                    <body>
+                        <div class="container">
+                          <div class="shape"></div>
+                        </div>
+                    </body>
+                    <div class="ProfilPicture">
+                        <img src="img/IMG_0218-1.png" alt="Photo de profil">
+                    </div>
+                </div>
+
+            <div class="CTA2">
+                <p id="lien"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

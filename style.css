@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "Poppins",;
+    src: url(Font/Poppins-Regular.ttf);
+    font-family: "Bodoni italic";
+    src: url(Font/libre-bodoni.italic.ttf);
+    font-family: "bodoni regular";
+    src: url(Font/bodonio.regular.ttf);
+    font-family: "sedwick";
+    src: url(Font/sedgwick-ave-display.regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**************** Nav ****************/
+
+header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    background-color: #1a1a1a;
+    position: fixed;
+}
+
+header .Logo {
+    height: 100%;
+}
+
+header img {
+    height: 50px;
+    margin: 15px;
+}
+
+.slide {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.MenuNav {
+    height: 100%;
+}
+
+.MenuNav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.MenuNav ul li:hover {
+    animation-name: scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.MenuNav ul li a:hover {
+    color: rgb(199, 199, 199);
+}
+
+@keyframes scale {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.1;
+    }
+}
+
+.MenuNav ul li {
+    font-size: 20px;
+    list-style: none;
+    text-align: center;
+    margin: 0px 50px;
+}
+
+.MenuNav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Poppins",Arial, Helvetica, sans-serif;
+}
+
+/**************** HOME ****************/
+
+#Home {
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home .GridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#Home .GridContainer .NomPrenom {
+    grid-column-start: 1;
+    font-size: 40px;
+    color: white;
+    font-family: "sedwick",Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+}
+
+#Home .GridContainer .CTA {
+    margin-top: 230px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    grid-column-start: 1;
+    font-size: 30px;
+    display: flex;
+    text-align: end;
+    font-family: "Poppins",Arial, Helvetica, sans-serif;
+}
+
+#Home .GridContainer .CTA2 {
+    width: 80%;
+    grid-column-start: 3;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    margin-top: 100px;
+    font-family: "Poppins",Arial, Helvetica, sans-serif;
+}
+
+#Home .BackgroundImg {
+    grid-column-start: 2;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+}
+
+:root {
+    --background: #1a1a1a;
+    --primary: #1a1a1a;
+    --secondary: #2a2a2a;
+    --third: #1a1a1a;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  .shape {
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    animation: morph 10s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    width: 600px;
+  }
+  
+  @keyframes morph {
+    0% {
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(-45deg, var(--primary) 0%, var(--secondary) 100%);
+    } 
+    
+    50% {
+        border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(-45deg, var(--third) 0%, var(--secondary) 100%);
+    }
+    
+    100% {
+      border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+      background: linear-gradient(-45deg, var(--primary) 0%, var(--secondary) 100%);
+    } 
+  }
+
+#Home .BackgroundImg .ProfilPicture {
+    transform: translate(0% ,-18%);
+}
+
+#Home .BackgroundImg .ProfilPicture img {
+    width: 100%;
+}
+
+/**************** Projects ****************/
+
+#Projects {
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    justify-content: center;
+}
+
+#Projects .ContainerCard {
+    display: flex;
+    width: 90%;
+    height: auto;
+    min-height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.ContainerCard .card {
+    width: 45%;
+    height: 40vh;
+    min-width: 400px;
+    min-height: 300px;
+    color: white;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.ContainerCard h1 {
+    background-color: #2a2a2a;
+    height: fit-content;
+    padding: 20px;
+    font-family: "Bodoni italic",Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    animation: morph 10s ease-in-out infinite;
+}
+
+.ContainerCard a {
+    text-decoration: none;
+    color: white;
+}
+
+.ContainerCard a:hover {
+    animation-name: scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.ContainerCard .photoshop {
+    background-image: url(https://picsum.photos/3000);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ContainerCard .Illustrator {
+    background-image: url(https://picsum.photos/3001);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ContainerCard .Procreate {
+    background-image: url(https://picsum.photos/3002);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ContainerCard .Web {
+    background-image: url(https://picsum.photos/3003);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/**************** About ****************/
+
+#About {
+    background-color: rgb(26, 26, 26);
+}
