@@ -245,28 +245,28 @@ header img {
 }
 
 .ContainerCard .photoshop {
-    background-image: url(https://picsum.photos/3000);
+    background-image: url(https://picsum.photos/1600/800);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .ContainerCard .Illustrator {
-    background-image: url(https://picsum.photos/3001);
+    background-image: url(https://picsum.photos/1601/800);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .ContainerCard .Procreate {
-    background-image: url(https://picsum.photos/3002);
+    background-image: url(https://picsum.photos/1602/800);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .ContainerCard .Web {
-    background-image: url(https://picsum.photos/3003);
+    background-image: url(https://picsum.photos/1603/800);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
