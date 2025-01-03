@@ -240,7 +240,7 @@ header img {
 
 .ContainerCard a:hover {
     animation-name: scale;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
